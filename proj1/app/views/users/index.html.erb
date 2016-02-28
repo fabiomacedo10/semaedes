@@ -1,0 +1,29 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Usuário</h1>
+
+<table>
+  <thead>
+    <tr>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %>   <span class="label secondary"><%= user.email %></span></td>
+        <td><%= user.phone %></td>
+        <td><%= user.picture %></td>
+        <td><%= link_to 'Mostrar', user, :class => 'button secondary small' %></td>
+        <td><%= link_to 'Editar', edit_user_path(user), :class => 'button info small' %></td>
+        <td><%= link_to 'Apagar', user, method: :delete, data: { confirm: 'Tem certeza que deseja apagar esse usuário?' }, :class => 'button alert small' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Usuário', new_user_path, :class => 'button large success expanded' %>

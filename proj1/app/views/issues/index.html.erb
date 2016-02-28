@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<h1>Ocorrências</h1>
+<% @issues.each do |issue| %>
+<div class="callout">
+  <div class="blog-post">
+  <h3><%= issue.title %> <span class="info label"><%= issue.status %></span></h3>
+  <p><%= issue.created_at %></p>
+  <%= image_tag(issue.picture_url, :class => 'thumbnail', :width => 850) if issue.picture.present? %>
+  <p><%= issue.descriptiion %></p>
+  <div>
+  <blockquote><%= issue.address %></blockquote>
+  <div class="expanded button-group">
+  <%= link_to 'Mostrar', issue, :class => 'primary hollow button' %>
+  <%= link_to 'Editar', edit_issue_path(issue), :class => 'warning hollow button' %>
+  <%= link_to 'Apagar', issue, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'alert hollow button' %>
+</div>
+  </div>
+  </div>
+  </div>
+<% end %>
+<%= link_to 'Criar Nova Ocorrência', new_issue_path, :class => 'button success expanded' %>
+<br>

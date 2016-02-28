@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "SEMAEDES" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+  <!-- INÍCIO MENU -->
+    <div class="top-bar">
+    <div class="top-bar-left">
+    <ul class="menu">
+    <li class="menu-text"><a href="issues">SEMAEDES</a></li>
+    <li><a href="/issues">Ocorrências</a></li>
+    <li><a href="#">Comentários</a></li>
+    </ul>
+    </div>
+    </div>
+  <!-- FIM MENU -->
+<div class="callout large primary">
+<div class="row column text-center">
+<h1>Vamos Combater o Aedes Aegypti</h1>
+<h2 class="subheader">Juntos Somos Mais Fortes!</h2>
+</div>
+</div>
+<div class="row medium-8 large-7 columns">
+    <%= yield %>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+        $(document).foundation();
+      </script>
+  <script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
+  </body>
+</html>
