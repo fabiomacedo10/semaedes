@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Título:</strong>
   <%= @issue.title %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
+  <strong>Imagem:</strong>
   <%= image_tag(@issue.picture_url, :width => 600) if @issue.picture.present? %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>Endereço:</strong>
   <%= @issue.address %>
 </p>
 
 <p>
-  <strong>Descriptiion:</strong>
+  <strong>Descrição:</strong>
   <%= @issue.descriptiion %>
 </p>
 
@@ -25,5 +25,5 @@
   <%= @issue.status %>
 </p>
 
-<%= link_to 'Edit', edit_issue_path(@issue) %> |
-<%= link_to 'Back', issues_path %>
+<%= link_to 'Editar', edit_issue_path(@issue) %> |
+<%= link_to 'Voltar', issues_path %>
