@@ -10,9 +10,9 @@
   <div>
   <blockquote><%= issue.address %></blockquote>
   <div class="expanded button-group">
-  <%= link_to 'Mostrar', issue, :class => 'primary hollow button' %>
-  <%= link_to 'Editar', edit_issue_path(issue), :class => 'warning hollow button' %>
-  <%= link_to 'Apagar', issue, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'alert hollow button' %>
+  <%= link_to 'Mostrar', issue, :class => 'button hollow primary' %>
+  <%= link_to 'Editar', edit_issue_path(issue), :class => 'button hollow warning' %>
+  <%= link_to 'Apagar', issue, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button hollow alert' %>
 </div>
   </div>
   </div>

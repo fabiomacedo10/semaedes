@@ -1,29 +1,21 @@
 <p id="notice"><%= notice %></p>
-
+<div class="callout">
 <p>
-  <strong>Title:</strong>
-  <%= @issue.title %>
+  <h3><%= @issue.title %> <span class="info label text-right"><%= @issue.status %></span></h3>
+</p>
+<p><%= @issue.created_at %></p>
+<p>
+  <%= image_tag(@issue.picture_url, :class => 'thumbnail', :width => 600) if @issue.picture.present? %>
+</p>
+<p>
+     <blockquote><%= @issue.address %></blockquote>
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= image_tag(@issue.picture_url, :width => 600) if @issue.picture.present? %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @issue.address %>
-</p>
-
-<p>
-  <strong>Descriptiion:</strong>
   <%= @issue.descriptiion %>
 </p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @issue.status %>
-</p>
-
-<%= link_to 'Edit', edit_issue_path(@issue) %> |
-<%= link_to 'Back', issues_path %>
+</div>
+<div class="expanded button-group">
+<%= link_to 'Editar', edit_issue_path(@issue), :class => 'button hollow warning' %>
+<%= link_to 'Voltar', issues_path, :class => 'button hollow secondary' %>
+</div>

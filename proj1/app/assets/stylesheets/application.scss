@@ -20,3 +20,16 @@
 /*= require foundation
 @import "foundation_and_overrides";
 /* Add imports of custom sass/scss files here */
+body {
+	background-color: #e9eaed;
+}
+.top-bar, .top-bar ul {
+	background-color: #3a5795;
+}
+.menu > li > a {
+	color: #fff;
+}
+.menu > li > a:hover {
+	text-decoration: underline;
+	background: none;
+}

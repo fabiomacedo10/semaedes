@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @issue %> |
-<%= link_to 'Back', issues_path %>
+<div class="expanded button-group">
+	<%= link_to 'Mostrar', @issue, :class => 'button hollow primary' %>
+	<%= link_to 'Voltar', issues_path, :class => 'button hollow secondary' %>
+</div>

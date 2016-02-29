@@ -10,28 +10,27 @@
       </ul>
     </div>
   <% end %>
+<div class="callout">
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder => 'Título da ocorrência' %>
   </div>
   <div class="field">
-    <%= f.label :picture %><br>
+    <%= f.label 'Envie uma foto' %><br>
     <%= f.file_field :picture %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :placeholder => 'Endereço da ocorrência' %>
   </div>
   <div class="field">
-    <%= f.label :descriptiion %><br>
-    <%= f.text_area :descriptiion %>
+    <%= f.text_area :descriptiion, :placeholder => 'Descrição da ocorrência' %>
   </div>
   <div class="field">
     <%= f.label :status %><br>
     <%= f.text_field :status, :id => 'exampleFileUpload' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Enviar', :class => 'button success expanded' %>
+  </div>
   </div>
 <% end %>
