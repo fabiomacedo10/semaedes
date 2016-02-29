@@ -3,7 +3,7 @@
 <% @issues.each do |issue| %>
 <div class="callout">
   <div class="blog-post">
-  <h3><%= issue.title %> <span class="info label"><%= issue.status %></span></h3>
+  <h3># <%= issue.title %> <span class="info label"><%= issue.status %></span></h3>
   <p><%= issue.created_at %></p>
   <%= image_tag(issue.picture_url, :class => 'thumbnail', :width => 850) if issue.picture.present? %>
   <p><%= issue.descriptiion %></p>
