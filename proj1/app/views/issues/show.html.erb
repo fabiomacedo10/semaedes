@@ -1,31 +1,16 @@
 <p id="notice"><%= notice %></p>
 <div class="callout">
 <p>
-<<<<<<< HEAD
   <h3><%= @issue.title %> <span class="info label text-right"><%= @issue.status %></span></h3>
 <p><%= @issue.created_at %></p>
 <p>
   <%= image_tag(@issue.picture_url, :class => 'thumbnail', :width => 600) if @issue.picture.present? %>
 <p>
-=======
-
-  <h3><%= @issue.title %> <span class="info label text-right"><%= @issue.status %></span></h3>
-
-  <strong>Título:</strong>
-  <%= @issue.title %>
-
-</p>
-<p><%= @issue.created_at %></p>
-<p>
-
-  <%= image_tag(@issue.picture_url, :class => 'thumbnail', :width => 600) if @issue.picture.present? %>
-
- 
+</p> 
 
 </p>
 <p>
 
->>>>>>> ed84577415ea5f9f9ea065ed0c9ee7b66459235e
      <blockquote><%= @issue.address %></blockquote>
 </p>
 
