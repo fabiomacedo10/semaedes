@@ -1,13 +1,24 @@
 <p id="notice"><%= notice %></p>
 <div class="callout">
 <p>
+<<<<<<< HEAD
   <h3><%= @issue.title %> <span class="info label text-right"><%= @issue.status %></span></h3>
+=======
+  <strong>Título:</strong>
+  <%= @issue.title %>
+>>>>>>> 41ce545aa5c9042f9e6a0fda4d6e95eec04341d7
 </p>
 <p><%= @issue.created_at %></p>
 <p>
+<<<<<<< HEAD
   <%= image_tag(@issue.picture_url, :class => 'thumbnail', :width => 600) if @issue.picture.present? %>
+=======
+  <strong>Imagem:</strong>
+  <%= image_tag(@issue.picture_url, :width => 600) if @issue.picture.present? %>
+>>>>>>> 41ce545aa5c9042f9e6a0fda4d6e95eec04341d7
 </p>
 <p>
+<<<<<<< HEAD
      <blockquote><%= @issue.address %></blockquote>
 </p>
 
@@ -19,3 +30,21 @@
 <%= link_to 'Editar', edit_issue_path(@issue), :class => 'button hollow warning' %>
 <%= link_to 'Voltar', issues_path, :class => 'button hollow secondary' %>
 </div>
+=======
+  <strong>Endereço:</strong>
+  <%= @issue.address %>
+</p>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @issue.descriptiion %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @issue.status %>
+</p>
+
+<%= link_to 'Editar', edit_issue_path(@issue) %> |
+<%= link_to 'Voltar', issues_path %>
+>>>>>>> 41ce545aa5c9042f9e6a0fda4d6e95eec04341d7
