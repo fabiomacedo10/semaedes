@@ -18,9 +18,11 @@
     <div class="top-bar">
     <div class="top-bar-left">
     <ul class="menu">
-    <li class="menu-text"><a href="issues">SEMAEDES</a></li>
-    <li><a href="/issues">Ocorrências</a></li>
-    <li><a href="#">Comentários</a></li>
+    <li class="menu-text" style="color:#fff3d9">SEMAEDES</li>
+    <li class="<%= current_page?(issues_path) ? 'active' : '' %>"><%= link_to 'Ocorrências
+            <span class="sr-only"></span>'.html_safe, issues_path %></li>
+    <li class="<%= current_page?(users_path) ? 'active' : '' %>"><%= link_to 'Usuários
+            <span class="sr-only"></span>'.html_safe, users_path %></li>
     </ul>
     </div>
     </div>
