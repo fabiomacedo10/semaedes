@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+
+# Área de comentários
+gem 'foreigner'
 # Upload de imagem
 gem 'carrierwave'
 # Foundation
