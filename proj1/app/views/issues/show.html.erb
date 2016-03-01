@@ -6,6 +6,15 @@
 <p><%= @issue.created_at %></p>
 <p>
   <%= image_tag(@issue.picture_url, :class => 'thumbnail', :width => 600) if @issue.picture.present? %>
+  <h3>Comments</h3>
+<% @issue.comments.each do |comment| %>
+  <div>
+    <strong><%= comment.user_name %></strong>
+    <br />
+    <p><%= comment.body %><p>
+  </div>
+<% end %>
+<%= render 'comments/form' %>
 <p>
 </p> 
 
