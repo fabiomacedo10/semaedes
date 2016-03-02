@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dsqus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Body</th>
+      <th>Issue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dsqus.each do |dsqu| %>
+      <tr>
+        <td><%= dsqu.user_name %></td>
+        <td><%= dsqu.body %></td>
+        <td><%= dsqu.issue_id %></td>
+        <td><%= link_to 'Show', dsqu %></td>
+        <td><%= link_to 'Edit', edit_dsqu_path(dsqu) %></td>
+        <td><%= link_to 'Destroy', dsqu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dsqu', new_dsqu_path %>

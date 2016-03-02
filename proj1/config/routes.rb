@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :comments
+  resources :dsqus
   resources :comments
   resources :issues
   root :to => redirect('/issues')

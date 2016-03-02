@@ -1,10 +1,10 @@
-<%= form_for(@comment) do |f| %>
-  <% if @comment.errors.any? %>
+<%= form_for(@dsqu) do |f| %>
+  <% if @dsqu.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+      <h2><%= pluralize(@dsqu.errors.count, "error") %> prohibited this dsqu from being saved:</h2>
 
       <ul>
-      <% @comment.errors.full_messages.each do |message| %>
+      <% @dsqu.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -19,7 +19,6 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
-  <%= f.hidden_field :issue_id %>
   <div class="field">
     <%= f.label :issue_id %><br>
     <%= f.number_field :issue_id %>
