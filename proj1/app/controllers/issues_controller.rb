@@ -65,10 +65,11 @@ class IssuesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_issue
       @issue = Issue.find(params[:id])
+      @dsqu = @issue.dsqus.build
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def issue_params
-      params.require(:issue).permit(:title, :picture, :address, :descriptiion, :status)
+      params.require(:issue).permit(:title, :picture, :address, :descriptiion, :status, :dsqu)
     end
 end
