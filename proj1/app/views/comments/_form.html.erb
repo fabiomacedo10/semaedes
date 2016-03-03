@@ -12,19 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_name %><br>
-    <%= f.text_field :user_name %>
+    <%= f.text_field :user_name, :placeholder => 'Nome Completo' %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :placeholder => 'Digite Seu Comentário' %>
   </div>
-  <%= f.hidden_field :issue_id %>
+ <!-- <%= f.hidden_field :issue_id %> 
   <div class="field">
     <%= f.label :issue_id %><br>
     <%= f.number_field :issue_id %>
-  </div>
+  </div> -->
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Criar Comentário'  %>
   </div>
 <% end %>

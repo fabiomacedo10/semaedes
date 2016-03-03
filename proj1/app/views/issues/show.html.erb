@@ -6,6 +6,14 @@
 <p><%= @issue.created_at %></p>
 <p>
   <%= image_tag(@issue.picture_url, :class => 'thumbnail', :width => 600) if @issue.picture.present? %>
+
+     <blockquote><%= @issue.address %></blockquote>
+</p>
+
+<p>
+  <%= @issue.descriptiion %>
+</p>
+
   <h3>Comments</h3>
 <% @issue.comments.each do |comment| %>
   <div>
@@ -21,12 +29,6 @@
 </p>
 <p>
 
-     <blockquote><%= @issue.address %></blockquote>
-</p>
-
-<p>
-  <%= @issue.descriptiion %>
-</p>
 </div>
 <div class="expanded button-group">
 <%= link_to 'Editar', edit_issue_path(@issue), :class => 'button hollow warning' %>
