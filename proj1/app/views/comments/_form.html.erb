@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<div class="callout success">
   <div class="field">
     <%= f.text_field :user_name, :placeholder => 'Nome Completo' %>
   </div>
@@ -23,6 +24,6 @@
     <%= f.number_field :issue_id %>
   </div> -->
   <div class="actions">
-    <%= f.submit 'Criar Comentário'  %>
+    <%= f.submit 'Enviar', :class => 'button success expanded'  %>
   </div>
 <% end %>
