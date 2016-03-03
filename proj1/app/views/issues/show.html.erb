@@ -16,10 +16,10 @@
 <p>
   <%= @issue.descriptiion %>
 </p>
-<% @issue.dsqus.each do |comment| %>
-   <strong><%= comment.user_name %></strong>
+<% @issue.dsqus.each do |c| %>
+   <strong><%= c.user_name %></strong>
    <br />
-   <p><%= comment.body %><p>
+   <p><%= c.body %><p>
 <% end %>
 <h3>Comentários</h3>
 <%= render 'dsqus/form' %>
