@@ -1,6 +1,8 @@
-<h1>Editing Comment</h1>
+<h1>Editar Comentário</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<div class="expanded button-group">
+<%= link_to 'Mostrar', @comment, :class => 'button hollow primary' %>
+<%= link_to 'Voltar', comments_path, :class => 'button hollow secondary' %>
+</div>
